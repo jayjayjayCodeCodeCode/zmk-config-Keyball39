@@ -5,6 +5,7 @@
 #define MOUSE   4
 #define SCROLL  5
 #define SNIPE   6
+#define CODEX   7
 
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
@@ -56,6 +57,17 @@
             bindings = <&kp LC(SPACE)>;
             label = "HIRAGANA";
         };
+
+        cdx_new: codex_new_task { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F13>; label = "CODEX_NEW"; };
+        cdx_approve: codex_approve { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F14>; label = "CODEX_APPROVE"; };
+        cdx_reject: codex_reject { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F15>; label = "CODEX_REJECT"; };
+        cdx_voice: codex_voice { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F16>; label = "CODEX_VOICE"; };
+        cdx_review: codex_review { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F17>; label = "CODEX_REVIEW"; };
+        cdx_debug: codex_debug { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F18>; label = "CODEX_DEBUG"; };
+        cdx_refactor: codex_refactor { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F19>; label = "CODEX_REFACTOR"; };
+        cdx_run: codex_run { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F20>; label = "CODEX_RUN"; };
+        cdx_stop: codex_stop { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F21>; label = "CODEX_STOP"; };
+        cdx_next: codex_next_agent { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F22>; label = "CODEX_NEXT"; };
     };
 
     keymap {
@@ -96,7 +108,7 @@
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &none                   &none   &none  &none  &none  &none
 &kp F5  &kp F6   &kp F7   &kp F8   &none                   &none   &none  &none  &none  &none
-&kp F9  &kp F10  &kp F11  &kp F12  &none                   &none   &none  &none  &none  &none
+&kp F9  &kp F10  &kp F11  &sl CODEX  &none                  &none   &none  &none  &none  &none
 &trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans                       &trans
             >;
         };
@@ -128,6 +140,16 @@
 &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans                          &trans
+            >;
+        };
+
+        codex_layer {
+            label = "CODEX";
+            bindings = <
+&cdx_new     &cdx_approve  &cdx_reject   &cdx_voice    &cdx_review                 &none  &none  &none  &none  &none
+&cdx_debug   &cdx_refactor &cdx_run      &cdx_stop     &cdx_next                   &none  &none  &none  &none  &none
+&trans       &trans        &trans        &trans        &trans                      &trans &trans &trans &trans &trans
+&trans       &trans        &trans        &trans        &trans  &trans  &trans  &trans                       &trans
             >;
         };
     };

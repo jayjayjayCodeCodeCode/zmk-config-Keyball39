@@ -23,3 +23,19 @@ The right-half trackball continues to activate the mouse, scroll, and snipe
 layers according to its existing PMW3610 configuration. This board has no RGB
 LEDs, rotary encoder, joystick, or touch input, so live agent-status lighting
 and dial/joystick controls are intentionally out of scope for this firmware.
+
+### Codex command layer
+
+Hold Enter to access `FUN`, then tap the fourth key of its third row (formerly
+F12). This activates a one-shot `CODEX` layer for the next keypress. Its first
+two rows emit reserved function keys for host-side automations:
+
+| Key position | Action label | Emits |
+| --- | --- | --- |
+| Q W E R T | New task, approve, reject, voice, review | F13–F17 |
+| A S D F G | Debug, refactor, run, stop, next agent | F18–F22 |
+
+These macros deliberately emit F13–F22 rather than guessing undocumented
+Codex desktop shortcuts. Bind those keys in a host-side automation or in any
+future Codex shortcut configuration. They cannot provide the Codex Micro's
+live agent-status lighting or hardware reasoning dial.
