@@ -161,44 +161,44 @@ layers:
   - CODEX
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   CODEX:
-  - 'Brightness-'
-  - 'Brightness+'
-  - 'Fast*'
-  - 'Review'
-  - 'Terminal'
-  - 'Plan*'
-  - 'Fork*'
-  - 'Mute'
-  - 'Volume-'
-  - 'Volume+'
-  - 'Approve'
-  - 'Sidebar'
-  - 'Dictate'
-  - 'Find'
-  - 'Search'
-  - 'Branch*'
-  - 'Commit*'
-  - 'PR*'
-  - 'Draft PR*'
-  - 'Settings'
-  - 'Merge*'
-  - 'Reject'
-  - 'Commands'
-  - 'Review panel'
-  - 'Browser'
-  - 'New chat'
-  - 'Folder'
-  - 'Reason-*'
-  - 'Reason+*'
-  - 'Shortcuts'
+  - $$mdi:brightness-7$$
+  - $$mdi:brightness-5$$
+  - Ctl+Alt+Gui+F
+  - Ctl+Sft+G
+  - {t: Ctl+`, s: Ctl+~}
+  - Ctl+Alt+Gui+P
+  - Ctl+Alt+Gui+K
+  - $$mdi:volume-off$$
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - Gui+B
+  - Ctl+Sft+D
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
+  - Gui+G
+  - Ctl+Alt+Gui+B
+  - Ctl+Alt+Gui+C
+  - Ctl+Alt+Gui+R
+  - Ctl+Alt+Gui+D
+  - {t: 'Gui+,', s: Gui+<}
+  - Ctl+Alt+Gui+M
+  - $$mdi:keyboard-esc$$
+  - Gui+Sft+P
+  - Gui+Alt+B
+  - Gui+T
+  - Gui+N
+  - Gui+O
+  - {t: Ctl+Alt+Gui+-, s: Ctl+Alt+Gui+_}
+  - {t: Ctl+Alt+Gui+=, s: Ctl+Alt+Gui++}
+  - {t: Gui+Sft+/, s: 'Gui+Sft+?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   SCROLL:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -291,10 +291,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+A
-  - Gui+S
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+F
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - Gui+G
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -302,18 +302,18 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+X
-  - Gui+C
-  - Gui+V
+  - {t: X, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+$$mdi:keyboard-tab$$
+  - {t: 'Gui+$$mdi:keyboard-tab$$', type: held}
   - Gui+Sft+$$mdi:keyboard-tab$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
