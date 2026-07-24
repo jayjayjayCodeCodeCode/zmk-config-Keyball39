@@ -13,32 +13,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define CDX_FAST         LC(LA(LG(F)))
-#define CDX_REVIEW       LC(LS(G))
-#define CDX_TERMINAL     LC(GRAVE)
-#define CDX_PLAN         LC(LA(LG(P)))
-#define CDX_FORK         LC(LA(LG(K)))
-#define CDX_APPROVE      ENTER
-#define CDX_SIDEBAR      LG(B)
-#define CDX_DICTATE      LC(LS(D))
-#define CDX_FIND         LG(F)
-#define CDX_SEARCH       LG(G)
-#define CDX_BRANCH       LC(LA(LG(B)))
-#define CDX_COMMIT       LC(LA(LG(C)))
-#define CDX_CREATE_PR    LC(LA(LG(R)))
-#define CDX_DRAFT_PR     LC(LA(LG(D)))
-#define CDX_SETTINGS     LG(COMMA)
-#define CDX_MERGE_PR     LC(LA(LG(M)))
-#define CDX_REJECT       ESCAPE
-#define CDX_COMMANDS     LG(LS(P))
-#define CDX_REVIEW_PANEL LG(LA(B))
-#define CDX_BROWSER      LG(T)
-#define CDX_NEW_CHAT     LG(N)
-#define CDX_FOLDER       LG(O)
-#define CDX_REASON_DN    LC(LA(LG(MINUS)))
-#define CDX_REASON_UP    LC(LA(LG(EQUAL)))
-#define CDX_SHORTCUTS    LG(LS(SLASH))
-
 &lt {
     tapping-term-ms = <240>;
     flavor = "balanced";
@@ -83,6 +57,32 @@
             bindings = <&kp LC(SPACE)>;
             label = "HIRAGANA";
         };
+
+        cdx_fast: codex_fast { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LA(LG(F)))>; label = "Fast"; };
+        cdx_review: codex_review { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LS(G))>; label = "Review"; };
+        cdx_terminal: codex_terminal { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(GRAVE)>; label = "Terminal"; };
+        cdx_plan: codex_plan { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LA(LG(P)))>; label = "Plan"; };
+        cdx_fork: codex_fork { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LA(LG(K)))>; label = "Fork"; };
+        cdx_approve: codex_approve { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp ENTER>; label = "Approve"; };
+        cdx_sidebar: codex_sidebar { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LG(B)>; label = "Sidebar"; };
+        cdx_dictate: codex_dictate { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LS(D))>; label = "Dictate"; };
+        cdx_find: codex_find { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LG(F)>; label = "Find"; };
+        cdx_search: codex_search { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LG(G)>; label = "Search"; };
+        cdx_branch: codex_branch { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LA(LG(B)))>; label = "Branch"; };
+        cdx_commit: codex_commit { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LA(LG(C)))>; label = "Commit"; };
+        cdx_create_pr: codex_create_pr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LA(LG(R)))>; label = "Create PR"; };
+        cdx_draft_pr: codex_draft_pr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LA(LG(D)))>; label = "Draft PR"; };
+        cdx_settings: codex_settings { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LG(COMMA)>; label = "Settings"; };
+        cdx_merge_pr: codex_merge_pr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LA(LG(M)))>; label = "Merge PR"; };
+        cdx_reject: codex_reject { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp ESCAPE>; label = "Reject"; };
+        cdx_commands: codex_commands { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LG(LS(P))>; label = "Commands"; };
+        cdx_review_panel: codex_review_panel { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LG(LA(B))>; label = "Review Panel"; };
+        cdx_browser: codex_browser { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LG(T)>; label = "Browser"; };
+        cdx_new_chat: codex_new_chat { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LG(N)>; label = "New Chat"; };
+        cdx_folder: codex_folder { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LG(O)>; label = "Folder"; };
+        cdx_reason_dn: codex_reason_dn { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LA(LG(MINUS)))>; label = "Reason Down"; };
+        cdx_reason_up: codex_reason_up { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(LA(LG(EQUAL)))>; label = "Reason Up"; };
+        cdx_shortcuts: codex_shortcuts { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LG(LS(SLASH))>; label = "Shortcuts"; };
     };
 
     combos {
@@ -142,9 +142,9 @@
         codex_layer {
             label = "CODEX";
             bindings = <
-&kp C_BRI_DN      &kp C_BRI_UP      &kp CDX_FAST      &kp CDX_REVIEW        &kp CDX_TERMINAL                  &kp CDX_PLAN      &kp CDX_FORK       &kp C_MUTE         &kp C_VOL_DN      &kp C_VOL_UP
-&kp CDX_APPROVE   &kp CDX_SIDEBAR   &kp CDX_DICTATE   &kp CDX_FIND          &kp CDX_SEARCH                    &kp CDX_BRANCH    &kp CDX_COMMIT     &kp CDX_CREATE_PR  &kp CDX_DRAFT_PR  &kp CDX_SETTINGS
-&kp CDX_MERGE_PR  &kp CDX_REJECT    &kp CDX_COMMANDS  &kp CDX_REVIEW_PANEL  &kp CDX_BROWSER                   &kp CDX_NEW_CHAT  &kp CDX_FOLDER     &kp CDX_REASON_DN  &kp CDX_REASON_UP &kp CDX_SHORTCUTS
+&kp C_BRI_DN     &kp C_BRI_UP     &cdx_fast      &cdx_review        &cdx_terminal                  &cdx_plan      &cdx_fork       &kp C_MUTE        &kp C_VOL_DN     &kp C_VOL_UP
+&cdx_approve     &cdx_sidebar     &cdx_dictate   &cdx_find          &cdx_search                    &cdx_branch    &cdx_commit     &cdx_create_pr   &cdx_draft_pr   &cdx_settings
+&cdx_merge_pr    &cdx_reject      &cdx_commands  &cdx_review_panel  &cdx_browser                   &cdx_new_chat  &cdx_folder     &cdx_reason_dn   &cdx_reason_up  &cdx_shortcuts
 &trans            &trans            &trans            &trans                &trans          &trans  &trans  &trans                                             &trans
             >;
         };
