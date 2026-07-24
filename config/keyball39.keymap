@@ -1,8 +1,8 @@
 #define DEFAULT 0
 #define NUM     1
 #define SYM     2
-#define FUN     3
-#define MOUSE   4
+#define MOUSE   3
+#define CODEX   4
 #define SCROLL  5
 #define SNIPE   6
 #define CMD     7
@@ -103,23 +103,23 @@
             >;
         };
 
-        function_layer {
-            label = "FUN";
-            bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &none                   &none   &none  &none  &none  &none
-&kp F5  &kp F6   &kp F7   &kp F8   &none                   &none   &none  &none  &none  &none
-&kp F9  &kp F10  &kp F11  &kp F12  &none                  &none   &none  &none  &none  &none
-&trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans                       &trans
-            >;
-        };
-
         mouse_layer {
             label = "MOUSE";
             bindings = <
 &kp N1          &kp N2          &kp N3        &kp N4     &kp N5                  &kp N6         &kp N7     &kp N8  &kp N9     &kp N0
 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none                   &kp PAGE_UP    &mkp LCLK  &none   &mkp RCLK  &mkp MCLK
 &none           &none           &none         &none      &none                   &kp PAGE_DOWN  &none      &none   &none      &none
-&none           &trans          &trans        &trans     &trans  &trans  &trans  &mo 3                                        &none
+&none           &trans          &trans        &trans     &trans  &trans  &trans  &mo CODEX                                    &none
+            >;
+        };
+
+        codex_layer {
+            label = "CODEX";
+            bindings = <
+&kp C_BRI_DN          &kp C_BRI_UP          &kp LC(LA(LG(F)))      &kp LC(LS(G))          &kp LC(GRAVE)                  &kp LC(LA(LG(P)))      &kp LC(LA(LG(K)))      &kp C_MUTE              &kp C_VOL_DN            &kp C_VOL_UP
+&kp ENTER             &kp LG(B)              &kp LC(LS(D))          &kp LG(F)               &kp LG(G)                      &kp LC(LA(LG(B)))      &kp LC(LA(LG(C)))      &kp LC(LA(LG(R)))      &kp LC(LA(LG(D)))      &kp LG(COMMA)
+&kp LC(LA(LG(M)))     &kp ESCAPE             &kp LG(LS(P))          &kp LG(LA(B))           &kp LG(T)                      &kp LG(N)              &kp LG(O)              &kp LC(LA(LG(MINUS)))  &kp LC(LA(LG(EQUAL)))  &kp LG(LS(SLASH))
+&trans                &trans                 &trans                 &trans                  &trans       &trans  &trans  &trans                                             &trans
             >;
         };
 
@@ -146,10 +146,10 @@
         cmd_layer {
             label = "CMD";
             bindings = <
-&kp LG(W)   &kp LG(Q)    &kp LG(TAB)       &kp LG(LS(TAB))   &kp LG(GRAVE)                  &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)
-&kp LG(C)   &kp LG(V)    &kp LG(X)        &kp LG(Z)         &kp LG(A)                     &kp LG(S)  &kp LG(F)  &kp LG(BACKSPACE) &kp LG(LEFT) &kp LG(RIGHT)
-&kp LG(N)   &kp LG(O)    &kp LG(S)        &kp LG(F)         &kp LG(P)                     &kp LG(G)  &kp LG(H)  &kp LG(M) &kp LG(LEFT_BRACKET) &kp LG(RIGHT_BRACKET)
-&sl NUM     &sl FUN      &trans          &trans            &trans       &trans &trans &trans                         &trans
+&none        &kp LG(W)  &sl CODEX  &kp LG(R)  &kp LG(T)                  &none  &none  &none  &none  &none
+&kp LG(A)    &kp LG(S)  &none      &kp LG(F)  &kp LG(G)                  &none  &none  &none  &none  &none
+&none        &kp LG(X)  &kp LG(C)  &kp LG(V)  &none                      &none  &none  &none  &none  &none
+&kp LG(TAB)  &kp LG(LS(TAB))  &none  &none  &none  &none  &none  &none              &none
             >;
         };
     };

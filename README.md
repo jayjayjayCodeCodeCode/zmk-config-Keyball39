@@ -14,7 +14,7 @@ The default layer keeps ordinary macOS modifiers intact:
 - `LCTRL`, `LGUI` (Command), and `LALT` (Option) remain normal keys
 - hold Escape for `SNIPE`
 - hold Space for `MOUSE`
-- hold Alt+Grave for `SCROLL` (tap emits Command+Grave for macOS window cycling)
+- hold the scroll thumb for `SCROLL` (tap emits Command+Grave for macOS window cycling)
 - Enter remains Enter
 - hold Backspace for `SYM`
 
@@ -26,22 +26,71 @@ and dial/joystick controls are intentionally out of scope for this firmware.
 ### macOS Command layer
 
 Press Left Ctrl+Left Option together to arm a one-shot `CMD` layer for the
-next keypress. It contains direct macOS shortcuts, so no host automation is
-needed for the basic actions:
+next keypress. The ordinary base Command key remains available for every
+Command shortcut; this layer only keeps frequent shortcuts and keys that are
+otherwise missing from the Keyball39 layout:
 
 | Key | Action |
 | --- | --- |
-| Q / W | Command+Q / Command+W |
-| E / R | Command+Tab / Command+Shift+Tab |
-| T | Command+Grave (cycle windows in the current app) |
-| Y–P | Command+1 through Command+5 |
-| A–; | Command+C, V, X, Z, A, S, F, Backspace, Left, Right |
-| Z–B | Command+N, O, S, F, P |
-| N–/ | Command+G, H, M, [, ] |
+| W / R / T | Command+W / Command+R / Command+T |
+| A / S / F / G | Command+A / Command+S / Command+F / Command+G |
+| X / C / V | Command+X / Command+C / Command+V |
+| E | Arm the one-shot `CODEX` layer |
+| Bottom-left / next key | Command+Tab / Command+Shift+Tab |
 
-From the `CMD` layer, the bottom-left positions arm the existing `NUM` or
-`FUN` layer for the following keypress. The layer uses ZMK's combo and sticky
-layer behaviors, which preserve the base typing layout while adding shortcuts.
-Codex Micro-specific live RGB status, agent approvals, and reasoning controls
-still require host/application integration or hardware that this Keyball does
-not have.
+All other `CMD` positions are inactive. Less frequent shortcuts such as
+Command+E, Command+N, Command+O, or Command+P remain available by holding the
+normal base Command key and tapping the matching physical letter. Command+Grave
+remains available from the scroll-thumb tap.
+
+### Codex and macOS controls layer
+
+The former `FUN` layer is now `CODEX`; F1-F12 are intentionally removed. Enter
+it for one keypress by arming `CMD` and tapping E. The existing hold route also
+works: hold Space for `MOUSE`, then hold Backspace for `CODEX` while tapping an
+action key.
+
+| Key | Action |
+| --- | --- |
+| Q / W | Display brightness down / up |
+| I / O / P | Mute / volume down / volume up |
+| E | Toggle Fast mode* |
+| R / T | Open review / toggle terminal |
+| Y / U | Toggle Plan mode* / continue in a new chat* |
+| A / X | Approve / reject the active request |
+| S / D | Toggle sidebar / start dictation |
+| F / G | Find in the current chat / search chats |
+| H / J / K / L | Create branch* / commit* / create PR* / create draft PR* |
+| ; | Open Settings |
+| Z | Merge PR* |
+| C / V | Open command menu / toggle review panel |
+| B / N / M | Open browser tab / new chat / open folder |
+| , / . | Decrease / increase reasoning effort* |
+| / | Command+Shift+/ (open the Codex shortcut explorer) |
+
+Bindings marked `*` need these one-time assignments in Codex Settings >
+Keyboard Shortcuts:
+
+| Codex action | Assign this shortcut |
+| --- | --- |
+| Toggle Fast mode | Control+Option+Command+F |
+| Toggle Plan mode | Control+Option+Command+P |
+| Continue in a new chat | Control+Option+Command+K |
+| Create branch | Control+Option+Command+B |
+| Commit | Control+Option+Command+C |
+| Create PR | Control+Option+Command+R |
+| Create draft PR | Control+Option+Command+D |
+| Merge PR | Control+Option+Command+M |
+| Decrease reasoning effort | Control+Option+Command+Minus |
+| Increase reasoning effort | Control+Option+Command+Equal |
+
+The display and audio bindings use standard ZMK consumer keycodes supported by
+macOS. Direct bindings use the current published Codex shortcuts; approve and
+reject send Enter and Escape and are meaningful only while an approval request
+is active. The custom three-modifier chords are intentionally uncommon and do
+nothing Codex-specific until assigned in the app.
+
+This reproduces the Codex Micro command surface that is available through
+ordinary keyboard shortcuts. Its six assigned Agent Keys, live RGB status,
+automatic app-linked layers, and exact joystick/dial behavior require the
+Micro's device integration or a separate host bridge and are not emulated here.
