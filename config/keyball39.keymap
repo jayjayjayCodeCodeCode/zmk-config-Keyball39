@@ -5,7 +5,7 @@
 #define MOUSE   4
 #define SCROLL  5
 #define SNIPE   6
-#define CODEX   7
+#define CMD     7
 
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
@@ -57,17 +57,17 @@
             bindings = <&kp LC(SPACE)>;
             label = "HIRAGANA";
         };
+    };
 
-        cdx_new: codex_new_task { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F13>; label = "CODEX_NEW"; };
-        cdx_approve: codex_approve { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F14>; label = "CODEX_APPROVE"; };
-        cdx_reject: codex_reject { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F15>; label = "CODEX_REJECT"; };
-        cdx_voice: codex_voice { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F16>; label = "CODEX_VOICE"; };
-        cdx_review: codex_review { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F17>; label = "CODEX_REVIEW"; };
-        cdx_debug: codex_debug { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F18>; label = "CODEX_DEBUG"; };
-        cdx_refactor: codex_refactor { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F19>; label = "CODEX_REFACTOR"; };
-        cdx_run: codex_run { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F20>; label = "CODEX_RUN"; };
-        cdx_stop: codex_stop { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F21>; label = "CODEX_STOP"; };
-        cdx_next: codex_next_agent { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp F22>; label = "CODEX_NEXT"; };
+    combos {
+        compatible = "zmk,combos";
+
+        cmd_layer {
+            timeout-ms = <75>;
+            key-positions = <30 32>; // Left Ctrl + Left Option
+            layers = <DEFAULT>;
+            bindings = <&sl CMD>;
+        };
     };
 
     keymap {
@@ -79,7 +79,7 @@
 &kp Q      &kp W         &kp E     &kp R         &kp T                                    &kp Y            &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D     &kp F         &kp G                                    &kp H            &kp J  &kp K      &kp L    &kp SEMI
 &kp Z      &kp X         &kp C     &kp V         &kp B                                    &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &lt NUM LALT  &lt SNIPE ESCAPE  &lt MOUSE SPACE  &lt SCROLL LA(GRAVE)  &lt FUN ENTER  &lt SYM BACKSPACE                             &kp RSHFT
+&kp LCTRL  &kp LGUI      &kp LALT       &lt SNIPE ESCAPE  &lt MOUSE SPACE  &lt SCROLL LG(GRAVE)  &kp ENTER  &lt SYM BACKSPACE                             &kp RSHFT
             >;
         };
 
@@ -108,7 +108,7 @@
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &none                   &none   &none  &none  &none  &none
 &kp F5  &kp F6   &kp F7   &kp F8   &none                   &none   &none  &none  &none  &none
-&kp F9  &kp F10  &kp F11  &sl CODEX  &none                  &none   &none  &none  &none  &none
+&kp F9  &kp F10  &kp F11  &kp F12  &none                  &none   &none  &none  &none  &none
 &trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans                       &trans
             >;
         };
@@ -143,13 +143,13 @@
             >;
         };
 
-        codex_layer {
-            label = "CODEX";
+        cmd_layer {
+            label = "CMD";
             bindings = <
-&cdx_new     &cdx_approve  &cdx_reject   &cdx_voice    &cdx_review                 &none  &none  &none  &none  &none
-&cdx_debug   &cdx_refactor &cdx_run      &cdx_stop     &cdx_next                   &none  &none  &none  &none  &none
-&trans       &trans        &trans        &trans        &trans                      &trans &trans &trans &trans &trans
-&trans       &trans        &trans        &trans        &trans  &trans  &trans  &trans                       &trans
+&kp LG(W)   &kp LG(Q)    &kp LG(TAB)       &kp LG(LS(TAB))   &kp LG(GRAVE)                  &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)
+&kp LG(C)   &kp LG(V)    &kp LG(X)        &kp LG(Z)         &kp LG(A)                     &kp LG(S)  &kp LG(F)  &kp LG(BACKSPACE) &kp LG(LEFT) &kp LG(RIGHT)
+&kp LG(N)   &kp LG(O)    &kp LG(S)        &kp LG(F)         &kp LG(P)                     &kp LG(G)  &kp LG(H)  &kp LG(M) &kp LG(LEFT_BRACKET) &kp LG(RIGHT_BRACKET)
+&sl NUM     &sl FUN      &trans          &trans            &trans       &trans &trans &trans                         &trans
             >;
         };
     };
