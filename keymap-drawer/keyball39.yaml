@@ -163,34 +163,34 @@ layers:
   CODEX:
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
-  - Ctl+Alt+Gui+F
-  - Ctl+Sft+G
-  - {t: Ctl+`, s: Ctl+~}
-  - Ctl+Alt+Gui+P
-  - Ctl+Alt+Gui+K
+  - '&cdx_fast'
+  - '&cdx_review'
+  - {t: '&cdx_terminal', s: Ctl+~}
+  - '&cdx_plan'
+  - '&cdx_fork'
   - $$mdi:volume-off$$
   - $$mdi:volume-low$$
   - $$mdi:volume-high$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - Gui+B
-  - Ctl+Sft+D
-  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
-  - Gui+G
-  - Ctl+Alt+Gui+B
-  - Ctl+Alt+Gui+C
-  - Ctl+Alt+Gui+R
-  - Ctl+Alt+Gui+D
-  - {t: 'Gui+,', s: Gui+<}
-  - Ctl+Alt+Gui+M
-  - $$mdi:keyboard-esc$$
-  - Gui+Sft+P
-  - Gui+Alt+B
-  - Gui+T
-  - Gui+N
-  - Gui+O
-  - {t: Ctl+Alt+Gui+-, s: Ctl+Alt+Gui+_}
-  - {t: Ctl+Alt+Gui+=, s: Ctl+Alt+Gui++}
-  - {t: Gui+Sft+/, s: 'Gui+Sft+?'}
+  - {t: '&cdx_approve', type: enter}
+  - '&cdx_sidebar'
+  - '&cdx_dictate'
+  - {t: '&cdx_find', h: '$$mdi:apple-keyboard-command$$'}
+  - '&cdx_search'
+  - '&cdx_branch'
+  - '&cdx_commit'
+  - '&cdx_create_pr'
+  - '&cdx_draft_pr'
+  - {t: '&cdx_settings', s: Gui+<}
+  - '&cdx_merge_pr'
+  - '&cdx_reject'
+  - '&cdx_commands'
+  - '&cdx_review_panel'
+  - '&cdx_browser'
+  - '&cdx_new_chat'
+  - '&cdx_folder'
+  - {t: '&cdx_reason_dn', s: Ctl+Alt+Gui+_}
+  - {t: '&cdx_reason_up', s: Ctl+Alt+Gui++}
+  - {t: '&cdx_shortcuts', s: 'Gui+Sft+?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
