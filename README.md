@@ -18,10 +18,19 @@ The default layer keeps ordinary macOS modifiers intact:
 - Enter remains Enter
 - hold Backspace for `SYM`
 
-The right-half trackball continues to activate the mouse, scroll, and snipe
-layers according to its existing PMW3610 configuration. This board has no RGB
-LEDs, rotary encoder, joystick, or touch input, so live agent-status lighting
-and dial/joystick controls are intentionally out of scope for this firmware.
+Moving the right-half trackball activates `AUTO_MOUSE` for 700 ms. While it is
+active, J is left click, L is right click, and semicolon is middle click; every
+other position passes through to normal typing. Hold Space for the richer
+`MOUSE` layer with numbers, arrows, page movement, and the same click cluster.
+Hold Escape for precision `SNIPE`, or hold the scroll thumb to scroll with the
+ball.
+
+Maintenance actions require deliberate layer-restricted chords: hold Escape
+and press Q+W together to enter the bootloader, or hold Backspace and press Q+W
+together to clear Bluetooth pairings. Bluetooth profile selection remains on
+the `SYM` layer. This board has no RGB LEDs, rotary encoder, joystick, or touch
+input, so live agent-status lighting and dial/joystick controls are
+intentionally out of scope for this firmware.
 
 ### macOS Command layer
 
