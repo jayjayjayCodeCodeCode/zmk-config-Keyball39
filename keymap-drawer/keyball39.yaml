@@ -325,7 +325,7 @@ combos:
   k: $$mdi:progress-download$$
   l: [SNIPE]
 - p: [0, 1]
-  k: BT CLR
+  k: $$mdi:bluetooth-off$$
   l: [SYM]
 - p: [30, 32]
   k: {t: CMD, h: '$$mdi:gesture-tap-hold$$'}
