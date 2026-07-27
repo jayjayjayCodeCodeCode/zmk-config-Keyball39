@@ -34,7 +34,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: Gui+`, h: SCROLL, s: Gui+~}
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:keyboard-esc$$', h: SNIPE}
+  - {t: '$$mdi:keyboard-esc$$', h: '&cmd_hold'}
   - {t: '$$mdi:keyboard-space$$', h: MOUSE}
   - {t: LGUI, h: SCROLL, s: Gui+~}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -135,7 +135,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: SNIPE, type: none}
   - PgUp
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -255,6 +255,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -274,8 +275,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -327,6 +327,3 @@ combos:
 - p: [0, 1]
   k: $$mdi:bluetooth-off$$
   l: [SYM]
-- p: [30, 32]
-  k: '&cmd_hold'
-  l: [QWRT]
