@@ -11,10 +11,11 @@ Firmware: *[Amos698](https://github.com/Amos698)* <br>
 
 The default layer keeps ordinary macOS modifiers intact:
 
-- `LCTRL`, `LGUI` (Command), and `LALT` (Option) remain normal keys
+- `LCTRL` and `LALT` (Option) remain normal keys
+- the inner left thumb is `LGUI` (Command)
 - hold Escape for `SNIPE`
 - hold Space for `MOUSE`
-- hold the scroll thumb for `SCROLL` (tap emits Command+Grave for macOS window cycling)
+- hold the former Command position for `SCROLL` (tap emits Command+Grave for macOS window cycling)
 - Enter remains Enter
 - hold Backspace for `SYM`
 
@@ -22,8 +23,8 @@ Moving the right-half trackball activates `AUTO_MOUSE` for 700 ms. While it is
 active, J is left click, L is right click, and semicolon is middle click; every
 other position passes through to normal typing. Hold Space for the richer
 `MOUSE` layer with numbers, arrows, page movement, and the same click cluster.
-Hold Escape for precision `SNIPE`, or hold the scroll thumb to scroll with the
-ball.
+Hold Escape for precision `SNIPE`, or hold the Scroll layer-tap key in the
+former Command position to scroll with the ball.
 
 Maintenance actions require deliberate layer-restricted chords: hold Escape
 and press Q+W together to enter the bootloader, or hold Backspace and press Q+W
@@ -34,30 +35,29 @@ intentionally out of scope for this firmware.
 
 ### macOS Command layer
 
-Press Left Ctrl+Left Option together to arm a one-shot `CMD` layer for the
-next keypress. The ordinary base Command key remains available for every
-Command shortcut; this layer only keeps frequent shortcuts and keys that are
-otherwise missing from the Keyball39 layout:
+Hold Left Ctrl+Left Option together to activate `CMD` while holding macOS
+Command. The 150 ms combo window makes the chord easier to press. Keep the
+combo held and tap W repeatedly to move forward through the macOS application
+switcher, or Q to move backward; release the combo to select the application.
+The inner-thumb Command key remains available for ordinary shortcuts such as
+Command+W, Command+C, and Command+V.
 
 | Key | Action |
 | --- | --- |
-| W / R / T | Command+W / Command+R / Command+T |
-| A / S / F / G | Command+A / Command+S / Command+F / Command+G |
-| X / C / V | Command+X / Command+C / Command+V |
+| W | Tab while Command is held (next application) |
+| Q | Shift+Tab while Command is held (previous application) |
 | E | Arm the one-shot `CODEX` layer |
-| Bottom-left / next key | Command+Tab / Command+Shift+Tab |
 
-All other `CMD` positions are inactive. Less frequent shortcuts such as
-Command+E, Command+N, Command+O, or Command+P remain available by holding the
-normal base Command key and tapping the matching physical letter. Command+Grave
-remains available from the scroll-thumb tap.
+All other `CMD` positions are transparent, so the held Command modifier applies
+to their normal base keys. Command+Grave remains available by tapping the
+Scroll layer-tap key in the former Command position.
 
 ### Codex and macOS controls layer
 
 The former `FUN` layer is now `CODEX`; F1-F12 are intentionally removed. Enter
-it for one keypress by arming `CMD` and tapping E. The existing hold route also
-works: hold Space for `MOUSE`, then hold Backspace for `CODEX` while tapping an
-action key.
+it for one keypress by holding the `CMD` combo and tapping E. The existing hold
+route also works: hold Space for `MOUSE`, then hold Backspace for `CODEX` while
+tapping an action key.
 
 | Key | Action |
 | --- | --- |
