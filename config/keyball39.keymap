@@ -48,6 +48,15 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        cmd_esc: cmd_escape {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&cmd_hold>, <&kp>;
+        };
     };
 
     macros {
@@ -115,12 +124,6 @@
             bindings = <&bt BT_CLR>;
         };
 
-        cmd_layer {
-            timeout-ms = <150>;
-            key-positions = <30 32>; // Left Ctrl + Left Option
-            layers = <DEFAULT>;
-            bindings = <&cmd_hold>;
-        };
     };
 
     keymap {
@@ -132,7 +135,7 @@
 &kp Q      &kp W         &kp E     &kp R         &kp T                                    &kp Y            &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D     &kp F         &kp G                                    &kp H            &kp J  &kp K      &kp L    &kp SEMI
 &kp Z      &kp X         &kp C     &kp V         &kp B                                    &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &lt SCROLL LG(GRAVE)  &kp LALT       &lt SNIPE ESCAPE  &lt MOUSE SPACE  &kp LGUI  &kp ENTER  &lt SYM BACKSPACE                             &kp RSHFT
+&kp LCTRL  &lt SCROLL LG(GRAVE)  &kp LALT       &cmd_esc 0 ESCAPE  &lt MOUSE SPACE  &kp LGUI  &kp ENTER  &lt SYM BACKSPACE                             &kp RSHFT
             >;
         };
 
@@ -160,7 +163,7 @@
             label = "MOUSE";
             bindings = <
 &kp N1          &kp N2          &kp N3        &kp N4     &kp N5                  &kp N6         &kp N7     &kp N8  &kp N9     &kp N0
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none                   &kp PAGE_UP    &mkp LCLK  &none   &mkp RCLK  &mkp MCLK
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &mo SNIPE               &kp PAGE_UP    &mkp LCLK  &none   &mkp RCLK  &mkp MCLK
 &none           &none           &none         &none      &none                   &kp PAGE_DOWN  &none      &none   &none      &none
 &none           &trans          &trans        &trans     &trans  &trans  &trans  &mo CODEX                                    &none
             >;

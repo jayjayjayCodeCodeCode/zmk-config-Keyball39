@@ -13,7 +13,7 @@ The default layer keeps ordinary macOS modifiers intact:
 
 - `LCTRL` and `LALT` (Option) remain normal keys
 - the inner left thumb is `LGUI` (Command)
-- hold Escape for `SNIPE`
+- tap Escape for Escape; hold it for `CMD` with macOS Command held
 - hold Space for `MOUSE`
 - hold the former Command position for `SCROLL` (tap emits Command+Grave for macOS window cycling)
 - Enter remains Enter
@@ -23,24 +23,24 @@ Moving the right-half trackball activates `AUTO_MOUSE` for 700 ms. While it is
 active, J is left click, L is right click, and semicolon is middle click; every
 other position passes through to normal typing. Hold Space for the richer
 `MOUSE` layer with numbers, arrows, page movement, and the same click cluster.
-Hold Escape for precision `SNIPE`, or hold the Scroll layer-tap key in the
-former Command position to scroll with the ball.
+While holding Space, hold G for precision `SNIPE`. Hold the Scroll layer-tap
+key in the former Command position to scroll with the ball.
 
-Maintenance actions require deliberate layer-restricted chords: hold Escape
-and press Q+W together to enter the bootloader, or hold Backspace and press Q+W
-together to clear Bluetooth pairings. Bluetooth profile selection remains on
-the `SYM` layer. This board has no RGB LEDs, rotary encoder, joystick, or touch
-input, so live agent-status lighting and dial/joystick controls are
+Maintenance actions require deliberate layer-restricted chords: hold Space,
+hold G, and press Q+W together to enter the bootloader; hold Backspace and press
+Q+W together to clear Bluetooth pairings. Bluetooth profile selection remains
+on the `SYM` layer. This board has no RGB LEDs, rotary encoder, joystick, or
+touch input, so live agent-status lighting and dial/joystick controls are
 intentionally out of scope for this firmware.
 
 ### macOS Command layer
 
-Hold Left Ctrl+Left Option together to activate `CMD` while holding macOS
-Command. The 150 ms combo window makes the chord easier to press. Keep the
-combo held and tap W repeatedly to move forward through the macOS application
-switcher, or Q to move backward; release the combo to select the application.
-The inner-thumb Command key remains available for ordinary shortcuts such as
-Command+W, Command+C, and Command+V.
+Tap Escape normally to send Escape. Hold Escape to activate `CMD` while holding
+macOS Command. Keep Escape held and tap W repeatedly to move forward through
+the macOS application switcher, or Q to move backward; release Escape to select
+the application. Left Control and Left Option remain ordinary modifiers, and
+the inner-thumb Command key remains available for shortcuts such as Command+W,
+Command+C, and Command+V.
 
 | Key | Action |
 | --- | --- |
@@ -55,9 +55,9 @@ Scroll layer-tap key in the former Command position.
 ### Codex and macOS controls layer
 
 The former `FUN` layer is now `CODEX`; F1-F12 are intentionally removed. Enter
-it for one keypress by holding the `CMD` combo and tapping E. The existing hold
-route also works: hold Space for `MOUSE`, then hold Backspace for `CODEX` while
-tapping an action key.
+it for one keypress by holding Escape and tapping E. The existing hold route
+also works: hold Space for `MOUSE`, then hold Backspace for `CODEX` while tapping
+an action key.
 
 | Key | Action |
 | --- | --- |
