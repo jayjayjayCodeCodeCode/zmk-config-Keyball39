@@ -23,8 +23,9 @@ Moving the right-half trackball activates `AUTO_MOUSE` for 700 ms. While it is
 active, J is left click, L is right click, and semicolon is middle click; every
 other position passes through to normal typing. Hold Space for the richer
 `MOUSE` layer with numbers, arrows, page movement, and the same click cluster.
-While holding Space, hold G for precision `SNIPE`. Hold the Scroll layer-tap
-key in the former Command position to scroll with the ball.
+While holding Space, tap B for a plain Tab or hold G for precision `SNIPE`.
+Hold the Scroll layer-tap key in the former Command position to scroll with the
+ball.
 
 Maintenance actions require deliberate layer-restricted chords: hold Space,
 hold G, and press Q+W together to enter the bootloader; hold Backspace and press
