@@ -48,6 +48,7 @@ Command+C, and Command+V.
 | W | Tab while Command is held (next application) |
 | Q | Shift+Tab while Command is held (previous application) |
 | E | Arm the one-shot `CODEX` layer |
+| A / S / D | Command+1 / Command+2 / Command+3 (select Chrome tab 1 / 2 / 3) |
 
 All other `CMD` positions are transparent, so the held Command modifier applies
 to their normal base keys. Command+Grave remains available by tapping the
