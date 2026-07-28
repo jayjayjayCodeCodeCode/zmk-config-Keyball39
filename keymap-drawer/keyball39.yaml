@@ -291,9 +291,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', h: '$$mdi:apple-keyboard-command$$', type: trans}
-  - {t: '$$mdi:transfer$$', h: '$$mdi:apple-keyboard-command$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '1', h: '$$mdi:apple-keyboard-command$$', s: '!', type: trans}
+  - {t: '2', h: '$$mdi:apple-keyboard-command$$', s: '@', type: trans}
+  - {t: '3', s: '#', type: trans}
   - {t: '$$mdi:transfer$$', h: '$$mdi:apple-keyboard-command$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
