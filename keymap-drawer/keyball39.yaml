@@ -201,36 +201,36 @@ layers:
   - {t: '$$mdi:transfer$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   SCROLL:
+  - {t: '!', type: trans}
+  - {t: '@', type: trans}
+  - {t: '#', type: trans}
+  - {t: $, type: trans}
+  - {t: '%', type: trans}
+  - {t: ^, type: trans}
+  - {t: '&', type: trans}
+  - {t: '*', type: trans}
+  - {t: (, type: trans}
+  - {t: ), type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', h: '1', s: '$$mdi:bluetooth-connect$$', type: trans}
+  - {t: '$$mdi:transfer$$', h: '2', s: '$$mdi:bluetooth-connect$$', type: trans}
+  - {t: '$$mdi:transfer$$', h: '3', s: '$$mdi:bluetooth-connect$$', type: trans}
+  - {t: '|', type: trans}
+  - {t: '-', s: _, type: trans}
+  - {t: '=', s: +, type: trans}
+  - {t: '[', s: '{', type: trans}
+  - {t: ']', s: '}', type: trans}
+  - {t: '''', s: '"', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: \, s: '|', type: trans}
+  - {t: _, type: trans}
+  - {t: +, type: trans}
+  - {t: '{', type: trans}
+  - {t: '}', type: trans}
+  - {t: '"', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
