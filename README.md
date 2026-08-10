@@ -25,7 +25,9 @@ other position passes through to normal typing. Hold Space for the richer
 `MOUSE` layer with numbers, arrows, page movement, and the same click cluster.
 While holding Space, tap B for a plain Tab or hold G for precision `SNIPE`.
 Hold the Scroll layer-tap key in the former Command position to scroll with the
-ball.
+ball or access symbols with the opposite hand. The right-hand symbol positions
+mirror `SYM`; comma and period add `{` and `}`, and slash sends `"` directly.
+While holding Scroll, left-hand G sends `|` and B sends `\`.
 
 Maintenance actions require deliberate layer-restricted chords: hold Space,
 hold G, and press Q+W together to enter the bootloader; hold Backspace and press
